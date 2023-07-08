@@ -9,12 +9,11 @@ function generateOTP(length) {
     }
     return OTP
   }
-  
-const otp =generateOTP(4)
 
 const SendOTP = (req,res) => {
     try {
         const { recipientNumber } = req.body
+        const otp = generateOTP(4)
         client.messages
         .create({
             body: `Your OTP is: ${otp}`,

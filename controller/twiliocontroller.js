@@ -1,7 +1,6 @@
-const accountSid = 'AC9202e42e2ac962c60f6d823db60f0a8a'
-const authToken = '42a90e7db39df4e1b845e16a5593bd46'
-const client = require('twilio')(accountSid, authToken)
-
+const accountSid = 'AC9202e42e2ac962c60f6d823db60f0a8a';
+const authToken = 'f0adfa2d58f8dd348c739d025ad56422';
+const client = require('twilio')(accountSid, authToken);
 function generateOTP(length) {
     const digits = '0123456789'
     let OTP = ''

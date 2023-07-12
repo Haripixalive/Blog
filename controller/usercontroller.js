@@ -20,10 +20,10 @@ const Login=async(req,res)=>{
             throw new Error("user not found")
         }
 
-        // const isMatch= await bcrypt.compare(password, user.password)
-        // if(!isMatch){
-        //     throw new Error("invalid password")
-        // }
+        const isMatch= await bcrypt.compare(password, user.password)
+        if(!isMatch){
+            throw new Error("invalid password")
+        }
 
         let tokenData = {
             id: user._id,
